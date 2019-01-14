@@ -19,27 +19,19 @@ public class Money {
 	}
 	
 	public Money add(Money target) {
-		Money temp = new Money();
-		temp.amount = this.amount + target.amount;
-		return temp;
+		return new Money(this.amount + target.amount);
 	}
 
 	public Money minus(Money target) {
-		Money temp = new Money();
-		temp.amount = this.amount - target.amount;
-		return temp;
+		return new Money(this.amount - target.amount);
 	}
 
 	public Money multiply(Money target) {
-		Money temp = new Money();
-		temp.amount = this.amount * target.amount;
-		return temp;
+		return new Money(this.amount * target.amount);
 	}
 
 	public Money devide(Money target) {
-		Money temp = new Money();
-		temp.amount = this.amount / target.amount;
-		return temp;
+		return new Money(this.amount / target.amount);
 	}
 	
 	@Override
@@ -48,7 +40,7 @@ public class Money {
 		int result = 1;
 		result = prime * result + amount;
 		return result;
-	}
+	}	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
